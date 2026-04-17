@@ -2,7 +2,6 @@ package com.example.courier.management.Models;
 
 import com.example.courier.management.Models.Type.DeliveryAssignmentStatus;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.LocalDateTime;

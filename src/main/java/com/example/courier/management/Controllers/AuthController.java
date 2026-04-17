@@ -1,6 +1,5 @@
 package com.example.courier.management.Controllers;
 
-import com.example.courier.management.Exceptions.InvalidCredentialsException;
 import com.example.courier.management.PayLoads.LoginRequestDTO;
 import com.example.courier.management.PayLoads.LoginResponseDTO;
 import com.example.courier.management.PayLoads.SignUpRequestDTO;
@@ -13,8 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -44,15 +41,5 @@ public class AuthController {
 
        return new ResponseEntity<>(userService.login(loginRequestDTO), HttpStatus.OK);
     }
-
-//    private void authenticate(String email, String password){
-//        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(email, password);
-//        try {
-//            authenticationManager.authenticate(authentication);
-//        }catch (BadCredentialsException e){
-//            log.error("Invalid Details!");
-//            throw new InvalidCredentialsException("Invalid Username and Password!");
-//        }
-//    }
 
 }

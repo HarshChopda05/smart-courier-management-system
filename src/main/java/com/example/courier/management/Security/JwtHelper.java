@@ -12,13 +12,11 @@ import org.springframework.stereotype.Component;
 import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 import java.util.function.Function;
 
 @Component
-
 public class JwtHelper {
 
     public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60; //JWT Token expires in 5 hours.
@@ -59,7 +57,6 @@ public class JwtHelper {
                 .getBody();
     }
 
-
     //check if the token has expired
     private Boolean isTokenExpired(String token) {
         final Date expiration = getExpirationDateFromToken(token);
@@ -77,7 +74,6 @@ public class JwtHelper {
                 .signWith(secretKey, SignatureAlgorithm.HS512)
                 .compact();
     }
-
 
     //while creating the token -
     //1. Define  claims of the token, like Issuer, Expiration, Subject, and the ID

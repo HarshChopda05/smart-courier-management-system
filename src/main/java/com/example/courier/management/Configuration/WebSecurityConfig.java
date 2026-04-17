@@ -38,9 +38,10 @@ public class WebSecurityConfig {
                         .requestMatchers("/courier/auth/**", "/public/**").permitAll()
 
                         //ADMIN (Role-based)
-                        .requestMatchers("/courier/admin/**").hasRole(ADMIN.name())
+                        .requestMatchers("/courier/admin/**").hasAnyRole(ADMIN.name())
                         //MANAGER
                         .requestMatchers("/courier/manager/**").hasAnyRole(MANAGER.name(), ADMIN.name())
+                        .requestMatchers("/courier/admin/**").hasAnyRole(ADMIN.name())
 
                         //AGENT
                         .requestMatchers("/courier/agent/**").hasAnyRole(AGENT.name(), ADMIN.name())

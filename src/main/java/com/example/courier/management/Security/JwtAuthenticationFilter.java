@@ -29,7 +29,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
-        log.info("incoming request: {}" + request.getRequestURI());
+        log.debug("incoming request: {}", request.getRequestURI());
 
         try {
 
@@ -42,8 +42,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
             //Authorization
             final String requestTokenHeader = request.getHeader("Authorization");
+
             //Bearer 2352345235sdfrsfgsdfsdf
-            log.info("Request Header Token: " + requestTokenHeader);
+            log.debug("Request Header Token: {} ", requestTokenHeader);
 
             String username = null;
             String token = null;
@@ -54,6 +55,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 token = requestTokenHeader.substring(7); //After Bearer, is token
                 try {
                     username = jwtHelper.getUsernameFromToken(token);
+                    log.debug("User name from JWTAuthenticaltion Filter: {}", username);
 
                 } catch (IllegalArgumentException e) {
                     throw new RuntimeException("Unable to get JWT Token!");
@@ -68,6 +70,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 //fetch userdetails from user name
                 UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
+                log.debug("User Details: {}", userDetails.getUsername(), userDetails.getAuthorities());
 
                 if (jwtHelper.validateToken(token, userDetails)) {
                     //set the authentication
@@ -75,7 +78,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                             new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 
-                    System.out.println("Authorities from JWT: " + userDetails.getAuthorities());
+                    log.debug("Authorities from JWT: {}", userDetails.getAuthorities());
                 } else {
                     throw new RuntimeException("Invalid JWT Token");
                 }
