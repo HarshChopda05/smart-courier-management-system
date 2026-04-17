@@ -85,8 +85,8 @@ public class OrderServiceImpl implements OrderService {
         Double total = 0.0;
 
         for (PackageRequestDTO dto : packageDTO){
-            Double basePrice = 50.0;
-            Double perKGPrice = 20.0;
+            Double basePrice = 30.0;
+            Double perKGPrice = 50.0;
 
             Double weightCharge = (perKGPrice * dto.getWeight());
 

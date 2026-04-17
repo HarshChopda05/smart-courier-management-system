@@ -6,7 +6,6 @@ public enum DeliveryAssignmentStatus {
     IN_PROGRESS,
     IN_TRANSIT,
     DELIVERED,
-    FAILED,
-    RETURNED
+    FAILED
 }
 

@@ -88,6 +88,7 @@ public class User implements UserDetails {
     @Override public boolean isAccountNonLocked() { return true; }    //Ex: 5 wrong password attempts → lock account
     @Override public boolean isCredentialsNonExpired() { return true; } //Ex: “Change password every 90 days”
     @Override public boolean isEnabled() { return true; }
+
     //Ex: Email not verified
 
 

@@ -39,7 +39,7 @@ public class AgentServiceImpl implements AgentService {
         List<DeliveryAssignment> assignments = deliveryAssignmentRepository.findByAgent(agent);
 
         if (assignments.isEmpty()) {
-            throw new RuntimeException("No packages assigned to this agent");
+            throw new ResourceNotFoundException("No packages assigned to this agent");
         }
 
         return assignments.stream().map(assignment ->{
@@ -92,8 +92,10 @@ Package Delivery Status flow = CREATED → PICKED → IN_TRANSIT → OUT_FOR_DEL
 
                 //Check Valid Assignment
         DeliveryAssignment assignment = deliveryAssignmentRepository
-                .findByPkgAndAgent(pkg, agent)
-                .orElseThrow(()-> new IllegalStateException("This package is not assigned to you!"));
+                .findActiveAssignment(pkg, agent, List.of(
+                                DeliveryAssignmentStatus.ASSIGNED,
+                                DeliveryAssignmentStatus.IN_PROGRESS))
+                .orElseThrow(() -> new IllegalStateException("No active assignment for this package!"));
 
         PackageStatus currentStatus = pkg.getPackageStatus();
         PackageStatus newStatus = requestDTO.getStatus();
@@ -128,7 +130,7 @@ Package Delivery Status flow = CREATED → PICKED → IN_TRANSIT → OUT_FOR_DEL
         //Update Package Status
         pkg.setPackageStatus(newStatus);
 
-        //Update Assignment Status + Timm
+        //Update Assignment Status + Time
         if (newStatus == PackageStatus.PICKED) {
             assignment.setPickedAt(now);
             assignment.setDeliveryAssignmentStatus(DeliveryAssignmentStatus.IN_PROGRESS);
@@ -174,7 +176,7 @@ Package Delivery Status flow = CREATED → PICKED → IN_TRANSIT → OUT_FOR_DEL
         if (allDelivered){
             order.setOrderStatus(OrderStatus.DELIVERED);
         }else if(anyFailed){
-            order.setOrderStatus(OrderStatus.CANCELED);
+            order.setOrderStatus(OrderStatus.SHIPPED);
         } else if (anyInTransit) {
             order.setOrderStatus(OrderStatus.SHIPPED);
         }else {
