@@ -38,3 +38,23 @@ The system is designed using relational database principles with the following c
 - PackageTracking
 
 📌 ER Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
