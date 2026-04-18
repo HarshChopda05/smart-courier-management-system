@@ -37,6 +37,26 @@ The system is designed using relational database principles with the following c
 - DeliveryAssignment
 - PackageTracking
 
+FULL SYSTEM FLOW (YOUR SCENARIO)
+Customer → Place Order
+        ↓
+Order → Packages (CREATED)
+        ↓
+Manager → Assign Package → Agent
+        ↓
+Agent → Pickup → IN_TRANSIT → OUT_FOR_DELIVERY
+        ↓
+Success → DELIVERED ✅
+Failure → FAILED ❌
+        ↓
+Manager → Reassign → Agent
+        ↓
+Repeat until DELIVERED
+        ↓
+Customer → Track anytime
+
+
+
 📌 ER Diagram
 
 🔗 API Overview
@@ -47,6 +67,7 @@ Register
 Login
 - POST /courier/auth/login
 
+Customer: 
 📦 Order APIs
 Place Order
 - POST /courier/orders
