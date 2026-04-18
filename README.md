@@ -60,7 +60,7 @@ FULL SYSTEM FLOW (YOUR SCENARIO)
 📌 ER Diagram
 
 <p align="center">
-  <img src="docs/images/ER Diagram.png" width="700"/>
+  <img src="docs/images/ER-Diagram.png" width="700"/>
   <br/>
   <em>Figure: Entity Relationship Diagram of Smart Courier System</em>
 </p>
