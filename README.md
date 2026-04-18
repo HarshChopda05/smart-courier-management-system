@@ -81,11 +81,11 @@ Track Package
 
 
 ⚙️ Key Highlights
-✔️-  Secure authentication using JWT
-✔️-  Clean architecture with DTO + Service + Repository layers
-✔️-  Efficient database handling using JPA & Hibernate
-✔️-  Asynchronous processing for performance optimization
-✔️-  Scalable and modular design
+- Secure authentication using JWT
+- Clean architecture with DTO + Service + Repository layers
+- Efficient database handling using JPA & Hibernate
+- Asynchronous processing for performance optimization
+- Scalable and modular design
 
       
 🔄 System Flow
