@@ -38,22 +38,22 @@ The system is designed using relational database principles with the following c
 - PackageTracking
 
 FULL SYSTEM FLOW (YOUR SCENARIO)
-Customer → Place Order
+- Customer → Place Order
         ↓
-Order → Packages (CREATED)
+- Order → Packages (CREATED)
         ↓
-Manager → Assign Package → Agent
+- Manager → Assign Package → Agent
         ↓
-Agent → Pickup → IN_TRANSIT → OUT_FOR_DELIVERY
+- Agent → Pickup → IN_TRANSIT → OUT_FOR_DELIVERY
         ↓
-Success → DELIVERED ✅
-Failure → FAILED ❌
+- Success → DELIVERED ✅
+- Failure → FAILED ❌
         ↓
-Manager → Reassign → Agent
+- Manager → Reassign → Agent
         ↓
-Repeat until DELIVERED
+- Repeat until DELIVERED
         ↓
-Customer → Track anytime
+- Customer → Track anytime
 
 
 
