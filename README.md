@@ -39,9 +39,69 @@ The system is designed using relational database principles with the following c
 
 📌 ER Diagram
 
+🔗 API Overview
+🔐 Authentication APIs
+Register
+POST /courier/auth/signup
+
+Login
+POST /courier/auth/login
+
+📦 Order APIs
+Place Order
+POST /courier/orders
+
+🚚 Delivery APIs
+Assign Package
+POST /courier/manager/assign
+
+👷 Agent APIs
+Get Assigned Packages
+GET /courier/agent/packages
+
+Update Status
+POST /courier/agent/update-status
+
+📍 Tracking APIs
+Track Package
+GET /courier/tracking/{packageId}
+
+👑 Admin APIs
+Get All Users
+Delete User
+Update User Roles
+
+🔐 Role-Based Access
+| Role     | Permissions                   |
+| -------- | ----------------------------- |
+| ADMIN    | Full system access            |
+| MANAGER  | Assign & monitor deliveries   |
+| AGENT    | Update delivery status        |
+| CUSTOMER | Place orders & track packages |
 
 
+⚙️ Key Highlights
+✔️ Secure authentication using JWT
+✔️ Clean architecture with DTO + Service + Repository layers
+✔️ Efficient database handling using JPA & Hibernate
+✔️ Asynchronous processing for performance optimization
+✔️ Scalable and modular design
 
+      
+🔄 System Flow
+Customer → Place Order  
+        → Manager Assigns Delivery  
+        → Agent Delivers Package  
+        → System Updates Tracking  
+        → Customer Tracks Package
+
+
+👨‍💻 Author
+
+Harsh Chopda
+Backend Developer
+
+📍 Open to Work (Remote / On-site)
 
 
 
