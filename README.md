@@ -12,6 +12,50 @@ A scalable backend system built using Java, Spring Boot, Spring Security (JWT), 
 - Scheduled Jobs using @Scheduled
 - Global Exception Handling
 
+1.	Authentication & Authorization
+- JWT-based authentication using Spring Security 
+- Role-Based Access Control (RBAC): 
+- ADMIN – Manage users 
+- MANAGER – Assign & monitor deliveries AGENT – Handle deliveries 
+- CUSTOMER – Place & track orders 
+
+2.	Order Management
+3.	 Customers can place orders with: 
+o	Address, city, Pincode
+o	Multiple packages (name, weight) 
+•	Auto creation of: 
+o	Order 
+o	Packages 
+o	Location 
+
+4.	Delivery Management
+•	Manager assigns packages to agents 
+•	Package status lifecycle:
+CREATED → IN_TRANSIT → DELIVERED / FAILED
+•	Failed deliveries can be reassigned 
+
+
+5.	Package Tracking
+•	Real-time tracking with: 
+o	Status updates 
+o	Timestamp 
+o	Location 
+•	Full tracking history maintained 
+
+ System Features
+•	Exception Handling (Global) 
+•	Validation using Jakarta Validation 
+•	Async Processing (@Async for bulk assignment) 
+•	Scheduled Jobs (@Scheduled for automation) 
+•	Secure password storage (BCrypt) 
+
+ Design Highlights
+•	Normalized database design 
+•	Foreign keys maintain referential integrity 
+•	Tracking table stores full history (audit trail) 
+•	Separate Delivery Assignment table for flexibility (reassignment support)
+
+
 
 🏗️ Tech Stack
 
