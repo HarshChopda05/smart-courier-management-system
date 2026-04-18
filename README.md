@@ -59,6 +59,8 @@ FULL SYSTEM FLOW (YOUR SCENARIO)
 
 📌 ER Diagram
 
+
+
 🔗 API Overview
 🔐 Authentication APIs
 Register
@@ -72,6 +74,21 @@ Customer:
 Place Order
 - POST /courier/orders
 
+📍 Tracking APIs
+Track Package
+- GET /courier/tracking/{packageId}
+
+👷 Manager APIs
+
+Get All Agents: 
+- GET / courier/manager/all-agents?page=0&size=10&sortBy=userId&sortDir=asc
+
+Get All Assignments
+- GET / courier/manager/all-assignments?page=0&size=10&sortBy=assignedId&sortDir=asc
+ 
+Get Dashboard
+- GET/ courier/admin/dashboard
+
 🚚 Delivery APIs
 Assign Package
 - POST /courier/manager/assign
@@ -83,12 +100,12 @@ Assign Package
 Update Status
 - POST /courier/agent/update-status
 
-📍 Tracking APIs
-Track Package
-- GET /courier/tracking/{packageId}
+
+
 
 👑 Admin APIs
 - Get All Users
+- Get User By Id
 - Delete User
 - Update User Roles
 
