@@ -20,27 +20,26 @@ A scalable backend system built using Java, Spring Boot, Spring Security (JWT), 
 - CUSTOMER – Place & track orders 
 
 2.	Order Management
-3.	 Customers can place orders with: 
-o	Address, city, Pincode
-o	Multiple packages (name, weight) 
-•	Auto creation of: 
-o	Order 
-o	Packages 
-o	Location 
+- Customers can place orders with: 
+- Address, city, Pincode
+-	Multiple packages (name, weight) 
+-	Auto creation of: -o	Order 
+-	Packages 
+-	Location 
 
 4.	Delivery Management
-•	Manager assigns packages to agents 
-•	Package status lifecycle:
-CREATED → IN_TRANSIT → DELIVERED / FAILED
-•	Failed deliveries can be reassigned 
+-	Manager assigns packages to agents 
+-	Package status lifecycle:
+ CREATED → IN_TRANSIT → DELIVERED / FAILED
+- ailed deliveries can be reassigned 
 
 
 5.	Package Tracking
-•	Real-time tracking with: 
-o	Status updates 
-o	Timestamp 
-o	Location 
-•	Full tracking history maintained 
+- Real-time tracking with: 
+- Status updates 
+- Timestamp 
+- Location 
+                                                                                                      Full tracking history maintained 
 
  System Features
 •	Exception Handling (Global) 
