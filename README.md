@@ -149,13 +149,11 @@ Update Status
 - POST /courier/agent/update-status
 
 
-
-
 👑 Admin APIs
-- Get All Users GET /courier/admin/users
-- Get User By Id GET/ courier/admin/users/5
-- Delete User DELETE/ courier/admin/users/8
-- Update User Roles PATCH/ courier/admin/users/7/role
+- Get All Users      GET /courier/admin/users
+- Get User By Id     GET/ courier/admin/users/5
+- Delete User        DELETE/ courier/admin/users/8
+- Update User Roles  PATCH/ courier/admin/users/7/role
 
 🔐 Role-Based Access
 | Role     | Permissions                   |
@@ -175,7 +173,8 @@ Update Status
 
       
 🔄 System Flow
-Customer → Place Order  
+
+→Customer → Place Order  
 → Manager Assigns Delivery  
 → Agent Delivers Package  
 → System Updates Tracking  
