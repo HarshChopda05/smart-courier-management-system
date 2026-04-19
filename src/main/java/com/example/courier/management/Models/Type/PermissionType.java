@@ -8,8 +8,6 @@ import lombok.RequiredArgsConstructor;
 public enum PermissionType {
 
     //ADMIN
-    MANAGE_USERS("ADMIN:Manage Users"),
-    CREATE_USER("ADMIN:Create User"),
     VIEW_USERS("ADMIN:View Users"),
     UPDATE_USER("ADMIN:Update User"),
     DELETE_USER("ADMIN:Delete User"),
@@ -20,8 +18,8 @@ public enum PermissionType {
     MONITOR_DELIVERY_AGENTS("MANAGER:Monitor Delivery Agents"),
 
     //DELIVERY AGENT
-    VIEW_ASSIGNED_DELIVERIES("AGENTView Assigned Deliveries"),
-    UPDATE_DELIVERY_STATUS("AGENTUpdate Delivery Status"),
+    VIEW_ASSIGNED_DELIVERIES("AGENT:View Assigned Deliveries"),
+    UPDATE_DELIVERY_STATUS("AGENT:Update Delivery Status"),
 
     //CUSTOMER
     PLACE_ORDER("CUSTOMER:Place Order"),

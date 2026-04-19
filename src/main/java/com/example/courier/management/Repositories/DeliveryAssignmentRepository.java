@@ -54,5 +54,11 @@ public interface DeliveryAssignmentRepository extends JpaRepository<DeliveryAssi
 
     List<DeliveryAssignment> findByPkg(Package pkg);
 
+    // DeliveryAssignmentRepository
+
+    @Query("SELECT d FROM DeliveryAssignment d WHERE d.pkg = :pkg")
+    List<DeliveryAssignment> findByPkgs(@Param("pkg") Package pkg);
+
+
 
 }

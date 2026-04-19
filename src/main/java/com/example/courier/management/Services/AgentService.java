@@ -10,6 +10,5 @@ import java.util.List;
 
 public interface AgentService {
     List<AgentAssignmentResponseDTO> getAssignedPackages(String email);
-
     UpdateDeliveryStatusResponseDTO updateDeliveryStatus(String email, @Valid UpdateDeliveryStatusRequestDTO requestDTO);
 }

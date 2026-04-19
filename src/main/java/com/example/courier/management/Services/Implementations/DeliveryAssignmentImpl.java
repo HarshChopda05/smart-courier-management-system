@@ -57,6 +57,7 @@ public class DeliveryAssignmentImpl implements DeliveryAssignmentService {
         List<DeliveryAssignment> assignmentList = new ArrayList<>();
         List<PackageTracking> trackingList = new ArrayList<>();
        // List<DeliveryAssignment> newAssignments = new ArrayList<>();
+
         List<CompletableFuture<DeliveryAssignment>> futures = new ArrayList<>();
 
         LocalDateTime now = LocalDateTime.now();
