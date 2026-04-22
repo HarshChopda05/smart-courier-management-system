@@ -4,8 +4,8 @@ public enum PackageStatus {
     CREATED,
     PICKED,
     IN_TRANSIT,
-    FAILED,
     OUT_FOR_DELIVERY,
+    FAILED,
     DELIVERED
 
 }
