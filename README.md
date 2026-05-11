@@ -1,8 +1,8 @@
-📦 Smart Courier Management System
+# 📦 Smart Courier Management System
 
 A scalable backend system built using Java, Spring Boot, Spring Security (JWT), and MySQL to manage end-to-end courier operations including order placement, delivery assignment, tracking, and user management.
 
-🚀 Features
+## 🚀 Features
 - JWT-based Authentication & Authorization
 - Role-Based Access Control (RBAC) (Admin, Manager, Agent, Customer)
 - Order & Package Management
@@ -12,14 +12,14 @@ A scalable backend system built using Java, Spring Boot, Spring Security (JWT), 
 - Scheduled Jobs using @Scheduled
 - Global Exception Handling
 
-1.	Authentication & Authorization
+### 1.	Authentication & Authorization
 - JWT-based authentication using Spring Security 
 - Role-Based Access Control (RBAC): 
 - ADMIN – Manage users 
 - MANAGER – Assign & monitor deliveries AGENT – Handle deliveries 
 - CUSTOMER – Place & track orders 
 
-2.	Order Management
+### 2.	Order Management
 - Customers can place orders with: 
 - Address, city, Pincode
 -	Multiple packages (name, weight) 
@@ -27,28 +27,28 @@ A scalable backend system built using Java, Spring Boot, Spring Security (JWT), 
 -	Packages 
 -	Location 
 
-4.	Delivery Management
+### 4.	Delivery Management
 -	Manager assigns packages to agents 
 -	Package status lifecycle:
  CREATED → IN_TRANSIT → DELIVERED / FAILED
 - ailed deliveries can be reassigned 
 
 
-5.	Package Tracking
+### 5.	Package Tracking
 - Real-time tracking with: 
 - Status updates 
 - Timestamp 
 - Location 
                                                                                                       Full tracking history maintained 
 
- System Features
+## System Features
 •	Exception Handling (Global) 
 •	Validation using Jakarta Validation 
 •	Async Processing (@Async for bulk assignment) 
 •	Scheduled Jobs (@Scheduled for automation) 
 •	Secure password storage (BCrypt) 
 
- Design Highlights
+## Design Highlights
 •	Normalized database design 
 •	Foreign keys maintain referential integrity 
 •	Tracking table stores full history (audit trail) 
@@ -56,7 +56,7 @@ A scalable backend system built using Java, Spring Boot, Spring Security (JWT), 
 
 
 
-🏗️ Tech Stack
+## 🏗️ Tech Stack
 
 | Layer      | Technology           |
 | ---------- | -------------------- |
@@ -69,7 +69,7 @@ A scalable backend system built using Java, Spring Boot, Spring Security (JWT), 
 | Testing    | Postman              |
 
 
-🗄️ Database Design
+## 🗄️ Database Design
 
 The system is designed using relational database principles with the following core entities:
 
@@ -80,7 +80,7 @@ The system is designed using relational database principles with the following c
 - DeliveryAssignment
 - PackageTracking
 
-FULL SYSTEM FLOW (YOUR SCENARIO)
+## FULL SYSTEM FLOW (YOUR SCENARIO)
 - Customer → Place Order
         ↓
 - Order → Packages (CREATED)
@@ -100,7 +100,7 @@ FULL SYSTEM FLOW (YOUR SCENARIO)
 
 
 
-📌 ER Diagram
+## 📌 ER Diagram
 
 <p align="center">
   <img src="docs/images/ER-Diagram.png" width="700"/>
@@ -109,24 +109,24 @@ FULL SYSTEM FLOW (YOUR SCENARIO)
 </p>
 
 
-🔗 API Overview
-🔐 Authentication APIs
+## 🔗 API Overview
+### 🔐 Authentication APIs
 Register
 - POST /courier/auth/signup
 
 Login
 - POST /courier/auth/login
 
-Customer: 
+### Customer: 
 📦 Order APIs
 Place Order
 - POST /courier/orders
 
-📍 Tracking APIs
+### 📍 Tracking APIs
 Track Package
 - GET /courier/tracking/{packageId}
 
-👷 Manager APIs
+### 👷 Manager APIs
 
 Get All Agents: 
 - GET / courier/manager/all-agents?page=0&size=10&sortBy=userId&sortDir=asc
@@ -137,11 +137,11 @@ Get All Assignments
 Get Dashboard
 - GET/ courier/admin/dashboard
 
-🚚 Delivery APIs
+### 🚚 Delivery APIs
 Assign Package
 - POST /courier/manager/assign
 
-👷 Agent APIs
+### 👷 Agent APIs
 - Get Assigned Packages
 - GET /courier/agent/packages
 
@@ -149,13 +149,13 @@ Update Status
 - POST /courier/agent/update-status
 
 
-👑 Admin APIs
+### 👑 Admin APIs
 - Get All Users      GET /courier/admin/users
 - Get User By Id     GET/ courier/admin/users/5
 - Delete User        DELETE/ courier/admin/users/8
 - Update User Roles  PATCH/ courier/admin/users/7/role
 
-🔐 Role-Based Access
+## 🔐 Role-Based Access
 | Role     | Permissions                   |
 | -------- | ----------------------------- |
 | ADMIN    | Full system access            |
@@ -164,7 +164,7 @@ Update Status
 | CUSTOMER | Place orders & track packages |
 
 
-⚙️ Key Highlights
+## ⚙️ Key Highlights
 - Secure authentication using JWT
 - Clean architecture with DTO + Service + Repository layers
 - Efficient database handling using JPA & Hibernate
@@ -172,7 +172,7 @@ Update Status
 - Scalable and modular design
 
       
-🔄 System Flow
+## 🔄 System Flow
 
 →Customer → Place Order  
 → Manager Assigns Delivery  
@@ -181,12 +181,12 @@ Update Status
 → Customer Tracks Package
 
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Harsh Chopda
 Backend Developer
 
-📍 Open to Work (Remote / On-site)
+## 📍 Open to Work (Remote / On-site)
 
 
 
