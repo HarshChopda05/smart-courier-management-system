@@ -39,7 +39,7 @@ A scalable backend system built using Java, Spring Boot, Spring Security (JWT), 
 - Status updates 
 - Timestamp 
 - Location 
-                                                                                                      Full tracking history maintained 
+- Full tracking history maintained 
 
 ## System Features
 •	Exception Handling (Global) 
@@ -186,7 +186,6 @@ Update Status
 Harsh Chopda
 Backend Developer
 
-## 📍 Open to Work (Remote / On-site)
 
 
 
