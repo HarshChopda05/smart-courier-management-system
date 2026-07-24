@@ -6,7 +6,8 @@ import com.example.courier.management.Models.Package;
 import com.example.courier.management.Models.Type.DeliveryAssignmentStatus;
 import com.example.courier.management.Models.Type.PackageStatus;
 import com.example.courier.management.Models.Type.RoleType;
-import com.example.courier.management.PayLoads.*;
+import com.example.courier.management.PayLoads.RequestDTO.DeliveryAssignmentRequestDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.*;
 import com.example.courier.management.Repositories.*;
 import com.example.courier.management.Services.DeliveryAssignmentService;
 

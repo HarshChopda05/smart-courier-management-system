@@ -2,9 +2,9 @@ package com.example.courier.management.Services.Implementations;
 
 import com.example.courier.management.Models.Type.RoleType;
 import com.example.courier.management.Models.User;
-import com.example.courier.management.PayLoads.PageResponseDTO;
-import com.example.courier.management.PayLoads.UpdateUserRoleRequestDTO;
-import com.example.courier.management.PayLoads.UserResponseDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.PageResponseDTO;
+import com.example.courier.management.PayLoads.RequestDTO.UpdateUserRoleRequestDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.UserResponseDTO;
 import com.example.courier.management.Repositories.DeliveryAssignmentRepository;
 import com.example.courier.management.Repositories.OrderRepository;
 import com.example.courier.management.Repositories.UserRepository;

@@ -1,8 +1,8 @@
 package com.example.courier.management.Services;
 
-import com.example.courier.management.PayLoads.PageResponseDTO;
-import com.example.courier.management.PayLoads.UpdateUserRoleRequestDTO;
-import com.example.courier.management.PayLoads.UserResponseDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.PageResponseDTO;
+import com.example.courier.management.PayLoads.RequestDTO.UpdateUserRoleRequestDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.UserResponseDTO;
 
 public interface AdminService {
     

@@ -1,8 +1,8 @@
 package com.example.courier.management.Controllers;
 
-import com.example.courier.management.PayLoads.AgentAssignmentResponseDTO;
-import com.example.courier.management.PayLoads.UpdateDeliveryStatusRequestDTO;
-import com.example.courier.management.PayLoads.UpdateDeliveryStatusResponseDTO;
+import com.example.courier.management.PayLoads.RequestDTO.AgentAssignmentResponseDTO;
+import com.example.courier.management.PayLoads.RequestDTO.UpdateDeliveryStatusRequestDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.UpdateDeliveryStatusResponseDTO;
 import com.example.courier.management.Services.AgentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

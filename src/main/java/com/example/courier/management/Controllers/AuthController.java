@@ -1,9 +1,9 @@
 package com.example.courier.management.Controllers;
 
-import com.example.courier.management.PayLoads.LoginRequestDTO;
-import com.example.courier.management.PayLoads.LoginResponseDTO;
-import com.example.courier.management.PayLoads.SignUpRequestDTO;
-import com.example.courier.management.PayLoads.SignUpResponseDTO;
+import com.example.courier.management.PayLoads.RequestDTO.LoginRequestDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.LoginResponseDTO;
+import com.example.courier.management.PayLoads.RequestDTO.SignUpRequestDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.SignUpResponseDTO;
 import com.example.courier.management.Security.JwtHelper;
 import com.example.courier.management.Services.UserService;
 import jakarta.validation.Valid;

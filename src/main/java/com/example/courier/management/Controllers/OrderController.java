@@ -1,7 +1,7 @@
 package com.example.courier.management.Controllers;
 
-import com.example.courier.management.PayLoads.OrderPlaceRequestDTO;
-import com.example.courier.management.PayLoads.OrderPlaceResponseDTO;
+import com.example.courier.management.PayLoads.RequestDTO.OrderPlaceRequestDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.OrderPlaceResponseDTO;
 import com.example.courier.management.Services.OrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

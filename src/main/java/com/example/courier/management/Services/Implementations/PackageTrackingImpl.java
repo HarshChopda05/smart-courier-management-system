@@ -5,7 +5,7 @@ import com.example.courier.management.Models.Location;
 import com.example.courier.management.Models.PackageTracking;
 import com.example.courier.management.Models.Package;
 import com.example.courier.management.Models.User;
-import com.example.courier.management.PayLoads.TrackingResponseDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.TrackingResponseDTO;
 import com.example.courier.management.Repositories.PackageRepository;
 import com.example.courier.management.Repositories.PackageTrackingRepository;
 import com.example.courier.management.Repositories.UserRepository;

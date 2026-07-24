@@ -1,6 +1,6 @@
 package com.example.courier.management.Controllers;
 
-import com.example.courier.management.PayLoads.TrackingResponseDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.TrackingResponseDTO;
 import com.example.courier.management.Services.PackageTrackingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

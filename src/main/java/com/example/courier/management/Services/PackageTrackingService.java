@@ -1,6 +1,6 @@
 package com.example.courier.management.Services;
 
-import com.example.courier.management.PayLoads.TrackingResponseDTO;
+import com.example.courier.management.PayLoads.ResponseDTO.TrackingResponseDTO;
 
 import java.util.List;
 
